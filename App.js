@@ -1,15 +1,16 @@
-import { View, Text } from "react-native";
+import { ThemeProvider } from "@rneui/themed";
+import theme from "./styles/theme";
+import LoginRegister from "./screens/LoginRegister";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-export default function App() {
+const App = () => {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Universal React with Expo</Text>
-    </View>
+    <SafeAreaView>
+      <ThemeProvider theme={theme}>
+        <LoginRegister />
+      </ThemeProvider>
+    </SafeAreaView>
   );
-}
+};
+
+export default App;
