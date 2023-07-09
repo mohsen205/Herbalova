@@ -1,11 +1,18 @@
 import React from "react";
-import { Text } from "react-native";
+import { View } from "react-native";
 import { HerbalovaBackgroundImage } from "../component/ui/content";
+import { Text } from "@rneui/themed";
+import { Button } from "@rneui/base";
 
 const LoginRegister = () => {
   return (
     <HerbalovaBackgroundImage>
-      <Text>LoginRegister</Text>
+      <View>
+        <Text h1 h1Style>
+          Herbalova
+        </Text>
+        <Button title="Ye" />
+      </View>
     </HerbalovaBackgroundImage>
   );
 };
