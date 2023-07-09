@@ -1,3 +1,3 @@
 import HerbalovaBackgroundImage from "./HerbalovaBackgroundImage";
-
-export { HerbalovaBackgroundImage };
+import Line from "./Line";
+export { HerbalovaBackgroundImage, Line };

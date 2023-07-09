@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Heading, Box, Center } from "native-base";
-import { HerbalovaBackgroundImage } from "../components/ui/content";
+import { HerbalovaBackgroundImage, Line } from "../components/ui/content";
 import { HerbalovaModal } from "../components/ui/overlay";
-import { Pressable, StyleSheet } from "react-native";
-import Line from "../components/ui/content/Line";
-import { View } from "react-native";
+import { Pressable, StyleSheet, Animated } from "react-native";
 
 const LoginRegister = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
   const handleOpenModal = () => {
-    console.log("Opened");
+    setIsVisible(true);
   };
 
   return (
@@ -24,12 +24,12 @@ const LoginRegister = () => {
           Herbalova
         </Heading>
       </Center>
-      <View style={styles.pressable}>
+      <Pressable onPress={handleOpenModal} style={styles.pressable}>
+        {/* Button */}
         <Center>
-          <Pressable onPress={handleOpenModal}>
-            <Line />
-          </Pressable>
+          <Line />
         </Center>
+        {/* simple box */}
         <Box
           _text={{
             textAlign: "center",
@@ -54,7 +54,7 @@ const LoginRegister = () => {
         >
           Sign in to your account
         </Box>
-      </View>
+      </Pressable>
     </HerbalovaBackgroundImage>
   );
 };

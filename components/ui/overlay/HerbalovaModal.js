@@ -2,7 +2,7 @@ import React from "react";
 import { Text } from "react-native";
 
 const HerbalovaModal = () => {
-  return <Text>Hello Modal</Text>;
+  return <Text>HerbalovaModal</Text>;
 };
 
 export default HerbalovaModal;
